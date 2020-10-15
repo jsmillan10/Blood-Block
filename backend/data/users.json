@@ -1,0 +1,50 @@
+[
+  {
+    "email": "carlos.sarmiento@carvajal.com",
+    "companies": [
+      { "NIT": "800242106-2", "role": "admin", "NITRetailer": "800242106-2" }
+    ]
+  },
+  {
+    "email": "axficionado@hotmail.com",
+    "companies": [
+      { "NIT": "38900550060", "role": "supplier", "NITRetailer": "800242106-2" }
+    ]
+  },
+  {
+    "email": "oscar.arcos@carvajal.com",
+    "companies": [
+      { "NIT": "800242106-2", "role": "admin", "NITRetailer": "800242106-2" }
+    ]
+  },
+  {
+    "email": "daniela.gonzalezc@carvajal.com",
+    "companies": [
+      { "NIT": "800242106-2", "role": "admin", "NITRetailer": "800242106-2" }
+    ]
+  },
+  {
+    "email": "jose.rengifo@carvajal.com",
+    "companies": [
+      { "NIT": "800242106-2", "role": "admin", "NITRetailer": "800242106-2" }
+    ]
+  },
+  {
+    "email": "efrain.patino@carvajal.com",
+    "companies": [
+      { "NIT": "800242106-2", "role": "admin", "NITRetailer": "800242106-2" }
+    ]
+  },
+  {
+    "email": "jonathan.arias@carvajal.com",
+    "companies": [
+      { "NIT": "38900550061", "role": "supplier", "NITRetailer": "800242106-2" }
+    ]
+  },
+  {
+    "email": "steven.muriel@carvajal.com",
+    "companies": [
+      { "NIT": "800242106-2", "role": "admin", "NITRetailer": "800242106-2" }
+    ]
+  }
+]

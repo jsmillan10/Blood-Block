@@ -1,0 +1,14 @@
+[
+  {
+    "name": "SodiProvider",
+    "NIT": "38900550060",
+    "logoURL": null,
+    "config": {
+      "defaultExpirationDays": 7,
+      "urgentDaysExpiration": 7,
+      "upcomingDaysExpiration": 15
+    },
+    "totalAmount": 0,
+    "totalDiscount": 0
+  }
+]

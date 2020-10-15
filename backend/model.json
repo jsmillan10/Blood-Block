@@ -1,0 +1,64 @@
+{
+  "_id": ID,
+  "name": String,
+  "NIT": String,
+  "admins": [{ "_id": AdminID }],
+  "suppliers": [{ "_id": SupplierCompanyID }],
+  "paymentBag": [{ "_id": OfferId }],
+  "tradingBag": [{ "_id": OfferId }],
+  "offers": [{ "_id": OfferId }],
+  "configuration": {
+    "totalCashFlow": Number,
+    "bestOptionCashFlow": Number,
+    "availableCashFlow": Number,
+    "defaultExpirationDays": Number,
+    "notificationDays": Number,
+    "cutoffDate": Number,
+    "urgentDaysInvoices": Number,
+    "soonExpirationDaysInvoices": Number,
+    "minDiscount": Number,
+    "maxDiscount": Number
+  }
+},
+{
+  "_id": ID,
+  "nit": String,
+  "urlLogo": String,
+  "offers": [{ "_id": OfferId }],
+  "paymentBag": [{ "_id": OfferId }],
+  "tradingBag": [
+    { "name": String, "offers": { "_id": OfferId }, "state": [0, 1, 2] }
+  ],
+  "configuration": {
+    "urgentDaysInvoices": Number,
+    "soonExpirationDaysInvoices": Number
+  }
+},{
+    "_id": ID,
+     "NITSupplier": String,
+   "NITRetailer":String
+     "CUFE": String,
+     "amount": Number,
+     "creationDate": Date,
+     "expirationDate": Date,
+     "expired": Boolean,
+     },
+{
+    "_id": ID,
+   "NITSupplier": String,
+  "NITRetailer":String
+    "CUFE": String,
+    "amount": Number,
+    "discountRate": Number,
+    "creationDate": Date,
+    "expirationDate": Date,
+    "invoice": InvoiceId,
+    "expired": Boolean,
+    "offerExpirationDate": Date,
+    "state":[0,1,2]
+  }
+,{
+    "_id": ID,
+    "email": String,
+  companies:[{NIT:String,role:["admin","supplier"}]
+  }

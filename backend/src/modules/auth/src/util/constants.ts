@@ -1,0 +1,3 @@
+export const STATUS_NOT_FOUND = 404
+export const STATUS_UNAUTHORIZED = 401
+export const STATUS_UNPROCESSABLE = 422

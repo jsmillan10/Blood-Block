@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Sodimac",
+    "NIT": "800242106",
+    "logoURL": null,
+    "config": {
+      "totalCashFlow": 0,
+      "availableCashFlow": 0,
+      "cutoffDate": {
+        "$date": "2020-07-16T05:00:00.000Z"
+      },
+      "minDiscount": 0,
+      "maxDiscount": 0.1,
+      "defaultExpirationDays": 7,
+      "urgentDaysExpiration": 7,
+      "upcomingDaysExpiration": 15
+    },
+    "totalAmount": 0,
+    "totalDiscount": 0
+  }
+]

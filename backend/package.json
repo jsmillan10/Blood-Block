@@ -1,0 +1,85 @@
+{
+  "name": "2matchback",
+  "version": "1.0.0",
+  "description": "Backend de la aplicación 2Match",
+  "main": "index.js",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^4.2.3",
+    "aws-sdk": "^2.693.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "cross-fetch": "^3.0.4",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "email-templates": "^7.0.5",
+    "exceljs": "^4.0.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.1",
+    "handlebars": "^4.7.6",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.3",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.10",
+    "mongoose-paginate-v2": "^1.3.9",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "node-sftp-server": "^0.3.0",
+    "nodemailer": "^6.4.8",
+    "ssh2": "^0.8.9",
+    "stream": "0.0.2"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.6",
+    "@types/lodash": "^4.14.157",
+    "@types/mongoose": "^5.7.12",
+    "@types/mongoose-paginate": "^5.0.8",
+    "@types/multer": "^1.4.3",
+    "@types/multer-s3": "^2.7.7",
+    "@types/node": "^13.11.1",
+    "@types/ssh2": "^0.5.43",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.4",
+    "ts-node": "^8.8.2",
+    "tsconfig-paths": "^3.9.0",
+    "ttypescript": "^1.5.10",
+    "typescript": "^3.8.3",
+    "typescript-transform-paths": "^1.1.14"
+  },
+  "scripts": {
+    "lint": "eslint src/ --ext .ts --fix",
+    "start": "ts-node --files src/server.ts",
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "bestOption": "go run ./bestOption/main.go ./bestOption/bestOption.go ./bestOption/offers.go",
+    "verifier": "cross-env NODE_ENV=verifier ts-node --files src/server.ts",
+    "email": "cross-env NODE_ENV=email ts-node --files src/server.ts",
+    "build": "ttsc && babel dist -d dist",
+    "deploy": "deploy.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://EDI-carvajal:E5cu3l4DI*@github.com/EDI-carvajal/2MatchBack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EDI-carvajal/2MatchBack/issues"
+  },
+  "homepage": "https://github.com/EDI-carvajal/2MatchBack#readme"
+}

@@ -1,0 +1,8 @@
+#docker-compose.yml
+version: '3.3'
+services:
+  invoices:
+    image: 2match-invoices
+    build:
+      context: ./
+      dockerfile: ./dist/api/invoices/Dockerfile
