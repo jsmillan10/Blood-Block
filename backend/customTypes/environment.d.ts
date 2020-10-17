@@ -9,15 +9,10 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       DB_HOST: string
-      JWK_URL: string
       BACK_URL: string
       NODE_ENV: 'development' | 'production' | 'verifier' | 'email'
-      S3_ACCESS_KEY: string
-      S3_SECRET_KEY: string
-      AWS_REGION: string
-      BUCKET_NAME: string
-      COGNITO_AWS_ACCESS_KEY: string
-      COGNITO_AWS_SECRET_KEY: string
+      PRIVATE_KEY: string
+      PUBLIC_KEY: string
     }
   }
   namespace Express {

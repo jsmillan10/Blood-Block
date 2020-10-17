@@ -5,7 +5,7 @@ export function exceptionMiddleware(
   res: express.Response,
   next: express.NextFunction
 ): void {
-  console.log('err', error)
+  console.log(error)
   // Express-validator
   if (
     (error.status === 400 ||
@@ -19,4 +19,23 @@ export function exceptionMiddleware(
   const message = error.message
   const data = error.data
   res.status(status).json({ message, data })
+}
+
+export function exceptionHandler(fn) {
+  return (
+    req: express.Request,
+    res: express.Response,
+    next: express.NextFunction
+  ): void => {
+    fn(req, res, next).catch((error) => next(error))
+  }
+}
+
+export class CustomError extends Error {
+  constructor(m: string, public statusCode: number) {
+    super(m)
+
+    // Set the prototype explicitly.
+    Object.setPrototypeOf(this, CustomError.prototype)
+  }
 }

@@ -9,23 +9,15 @@ const autoIndex = process.env.NODE_ENV !== 'production'
 const UserSchema = new Schema(
   {
     email: { type: String, required: true },
-    companies: [
-      {
-        NIT: { type: String, required: true },
-        role: { type: String, enum: ['admin', 'supplier'], required: true },
-        NITRetailer: { type: String, required: true },
-        name: { type: String, required: true },
-      },
-    ],
+    name: { type: String, required: true },
+    password: { type: String, required: true },
+    role: { type: String, required: true },
+    refreshToken: { type: String, required: false },
   },
   { autoIndex }
 )
 
 UserSchema.index({ email: 1 })
-
-UserSchema.index({ 'companies.NIT': 1 })
-
-UserSchema.index({ 'companies.NITRetailer': 1 })
 
 UserSchema.plugin(mongoosePaginate)
 

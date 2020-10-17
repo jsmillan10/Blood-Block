@@ -4,7 +4,6 @@ import {
   ValidationChain,
   header,
   validationResult,
-  check,
 } from 'express-validator'
 import express from 'express'
 import { Middleware } from 'express-validator/src/base'
@@ -26,7 +25,7 @@ export const validate = (
           .withMessage('El formato del email no es válido'),
         body('password', 'Debe ingresar una contraseña válida')
           .exists()
-          .matches(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/, 'i')
+          .matches(/.{8,}$/, 'i')
           .withMessage(
             'La contraseña contener mayúsculas, minúsculas, un número y ser de al menos 8 caracteres'
           ),
@@ -42,9 +41,16 @@ export const validate = (
     }
     case 'create': {
       return [
-        check('users.*.email').not().isEmpty(),
-        check('users.*.NIT').not().isEmpty(),
-        check('users.*.companyName').not().isEmpty(),
+        body('email', 'Debe ingresar un email válido')
+          .exists()
+          .isEmail()
+          .withMessage('El formato del email no es válido'),
+        body('password', 'Debe ingresar una contraseña válida')
+          .exists()
+          .matches(/.{8,}$/, 'i')
+          .withMessage('La contraseña ser de al menos 8 caracteres'),
+        body('name', 'Debe ingresar un nombre').exists(),
+        body('role', 'Debe ingresar un rol de usuario').exists(),
       ]
     }
     case 'confirmNewPassword': {
@@ -55,7 +61,7 @@ export const validate = (
           .withMessage('El formato del email no es válido'),
         body('password', 'Debe ingresar una contraseña válida')
           .exists()
-          .matches(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/, 'i')
+          .matches(/.{8,}$/, 'i')
           .withMessage(
             'La contraseña contener mayúsculas, minúsculas, un número y ser de al menos 8 caracteres'
           ),

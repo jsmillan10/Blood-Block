@@ -20,3 +20,23 @@ export function exceptionMiddleware(
   const data = error.data
   res.status(status).json({ message, data })
 }
+
+export function exceptionHandler(fn) {
+  return (
+    req: express.Request,
+    res: express.Response,
+    next: express.NextFunction
+  ): void => {
+    fn(req, res, next).catch((error) => next(error))
+  }
+}
+
+export class CustomError extends Error {
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  constructor(m: any, public statusCode: number) {
+    super(m)
+
+    // Set the prototype explicitly.
+    Object.setPrototypeOf(this, CustomError.prototype)
+  }
+}
