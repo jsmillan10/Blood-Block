@@ -1,0 +1,43 @@
+@font-face{
+  font-family: epilogue;
+  src: url(../../fonts/Epilogue.ttf);
+}
+
+@font-face{
+  font-family: epilogue-italic;
+  src: url(../../fonts/Epilogue-Italic.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url(../../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: url(../../fonts/OpenSans-SemiBold.ttf);
+}
+
+* {
+ font-family: epilogue;
+}
+
+.loading-dialog {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3500;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
