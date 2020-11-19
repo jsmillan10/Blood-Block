@@ -1,0 +1,14 @@
+.header-home {
+  display: flex;
+  flex-direction: column;
+
+  .fila-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-eps {
+      width: fit-content;
+    }
+  }
+}

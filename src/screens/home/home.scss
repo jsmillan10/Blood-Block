@@ -1,3 +1,6 @@
 .home-screen {
-  background-color: $color-fondo;
+  display: flex;
+  flex-direction: column;
+
+  @import "header/header";
 }
